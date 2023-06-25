@@ -1,0 +1,172 @@
+/* postitioning absolutes images */
+
+#headline1 {
+  position: absolute;
+  top: 42rem;
+}
+
+#femaleImage {
+  position: absolute;
+  top: 25rem;
+}
+
+#headline2 {
+  position: absolute;
+  top: 18rem;
+  right: 10rem;
+}
+
+#subheadline {
+  position: absolute;
+  top: 35rem;
+  left: 40rem;
+}
+
+#LearnMorebtn {
+  position: absolute;
+  top: 45rem;
+  left: 50%;
+  width: 40rem;
+  height: 11rem;
+}
+
+#logo {
+  position: absolute;
+  top: 15rem;
+  left: 65rem;
+  width: 40rem;
+}
+
+#replay {
+  position: absolute;
+  top: 55rem;
+  left: 52%;
+  width: 30rem;
+  height: 8rem;
+}
+
+/* postitioning absolutes images end */
+
+#banner {
+  background-image: url(background.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.popout-image {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: fade-in 1s ease forwards; /* Fade-in animation */
+}
+
+.headline {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: -100%; /* Start from the left */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation-duration: 1s; /* Slide-in and slide-out animation duration */
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.subheadline {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: -100%; /* Start from the left */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation-duration: 1s; /* Slide-in and slide-out animation duration */
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Keyframe animation for slide-in */
+@keyframes slide-in {
+  from {
+    left: -100%; /* Start from the left */
+  }
+  to {
+    left: 50%; /* Slide to the center */
+  }
+}
+
+/* Keyframe animation for slide-out */
+@keyframes slide-out {
+  from {
+    left: 50%; /* Start from the center */
+  }
+  to {
+    left: 100%; /* Slide out to the right */
+  }
+}
+
+/* Keyframe animation for slide-to-right */
+@keyframes slide-to-right {
+  from {
+    left: 50%; /* Start from the center */
+  }
+  to {
+    left: 100%; /* Slide to the right */
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    left: 100%; /* Start from the center */
+  }
+  to {
+    left: 50%; /* Slide to the left */
+  }
+}
+
+@keyframes slide-to-top-right {
+  from {
+    left: 50%; /* Start from the center */
+    top: 50%; /* Start from the center */
+  }
+  to {
+    left: 54%; /* Slide to the right */
+    top: 10rem; /* Slide to the top */
+
+    img {
+      width: 1rem;
+    }
+  }
+}
+
+@keyframes slide-to-left2 {
+  from {
+    left: 100%; /* Start from the center */
+  }
+  to {
+    right: 50%; /* Slide to the left */
+  }
+}
